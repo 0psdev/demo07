@@ -7,9 +7,9 @@ variable "TENANT_ID" {
 }
 
 variable "RSG_ID" {
-  type = string
+  #type = string
 }
 
 variable "LOCATION_ID" {
-  type = string
+  #type = string
 }
