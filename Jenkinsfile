@@ -16,8 +16,6 @@ pipeline {
     stages {
         stage('AZ') {
             steps {
-                bat 'echo %TF_VAR_RSG_ID%'
-                bat 'echo %TF_VAR_ENV_ID%'
 				bat 'echo %TF_VAR_CLIENT_SECRET% '
 				bat 'echo %TF_VAR_TENANT_ID%'
                 bat 'echo %TF_VAR_SUB_ID%'
