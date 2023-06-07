@@ -25,7 +25,7 @@ pipeline {
         }
         stage('TF') {
             steps {
-                bat 'terraform plan'
+                bat 'terraform plan -var-file vars.tfvars'
             }
         }
     }
