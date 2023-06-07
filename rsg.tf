@@ -1,7 +1,4 @@
-locals {
-  RG_NAME = "${var.RSG_ID}"
-}
 resource "azurerm_resource_group" "rsg" {
-  name     = local.RG_NAME
+  name     = var.RSG_ID
   location = var.LOCATION_ID
 }
