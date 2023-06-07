@@ -5,10 +5,12 @@ pipeline {
           choice(name: "ENV_ID", choices: ["DEV", "UAT", "PRD"], description: "Environment for deploy")
   }
       environment {
-        CLIENT_ID = credentials('AZURE_CLIENT_ID')
-        CLIENT_SECRET = credentials('AZURE_CLIENT_SECRET')
-        TENANT_ID = credentials('AZURE_TENANT_ID')
-        SUB_ID = credentials('AZURE_SUB_ID')
+        TF_VAR_CLIENT_ID = credentials('AZURE_CLIENT_ID')
+        TF_VAR_CLIENT_SECRET = credentials('AZURE_CLIENT_SECRET')
+        TF_VAR_TENANT_ID = credentials('AZURE_TENANT_ID')
+        TF_VAR_SUB_ID = credentials('AZURE_SUB_ID')
+        TF_VAR_RSG_ID = parameters('RSG_ID')
+        TF_VAR_ENV_ID = parameters('ENV_ID')
   }
 
     stages {
@@ -16,10 +18,10 @@ pipeline {
             steps {
                 bat 'echo %RSG_ID%'
                 bat 'echo %ENV_ID%'
-				bat 'echo %CLIENT_SECRET% '
-				bat 'echo %TENANT_ID%'
-                bat 'echo %SUB_ID%'
-				bat 'az login --service-principal -u %CLIENT_ID% -p %CLIENT_SECRET% --tenant %TENANT_ID%'
+				bat 'echo %TF_VAR_CLIENT_SECRET% '
+				bat 'echo %TF_VAR_TENANT_ID%'
+                bat 'echo %TF_VAR_SUB_ID%'
+				bat 'az login --service-principal -u %TF_VAR_CLIENT_ID% -p %TF_VAR_CLIENT_SECRET% --tenant %TF_VAR_TENANT_ID%'
 				bat 'az account subscription list'
             }
         }
