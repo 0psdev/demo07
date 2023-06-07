@@ -8,6 +8,6 @@ variable "RSG_ID" {
   }
 }
 resource "azurerm_resource_group" "rsg" {
-  name     = "${var.RSG_ID}"
+  name     = var.RSG_ID
   location = var.LOCATION_ID
 }
