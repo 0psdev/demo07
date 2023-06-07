@@ -26,7 +26,7 @@ pipeline {
         stage('TF') {
             steps {
                 bat 'terraform init'
-                bat 'terraform plan -var-file vars.tfvars'
+                bat 'terraform apply -auto-approve'
             }
         }
     }
