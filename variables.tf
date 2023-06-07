@@ -6,7 +6,7 @@ variable "TENANT_ID" {
   type = string
 }
 
-variable "RSG_ID" {
+variable "RG_ID" {
   type = string
 }
 
