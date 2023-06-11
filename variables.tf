@@ -6,10 +6,10 @@ variable "TENANT_ID" {
   type = string
 }
 
-variable "RSG_ID" {
-  #type = string
+variable "RSG_NAME" {
+  type = string
 }
 
-variable "LOCATION_ID" {
-  #type = string
+variable "LOCATION_NAME" {
+  type = string
 }
