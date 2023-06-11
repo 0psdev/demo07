@@ -9,7 +9,7 @@ pipeline {
         TF_VAR_CLIENT_SECRET = credentials('AZURE_CLIENT_SECRET')
         TF_VAR_TENANT_ID = credentials('AZURE_TENANT_ID')
         TF_VAR_SUB_ID = credentials('AZURE_SUB_ID')
-        TF_VAR_RSG_ID = parameters('RSG_ID')
+        TF_VAR_RSG_ID = "${RSG_ID}"
         TF_VAR_ENV_ID = parameters('ENV_ID')
   }
 
