@@ -5,7 +5,7 @@ How to deploy Azure resouce via Jenkins and Terraform
 This repo use for study IAC.
 
 ### Software Requirement
-1. Azure subscription
+1. Azure CLI
 2. Jenkins
 3. Terraform
 
