@@ -1,5 +1,5 @@
 # demo07
-How to deploy Azure resouce via IAC
+How to deploy Azure resouce via Jenkins and Terraform
 
 ## Introduction
 This repo use for study IAC.
