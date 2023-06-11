@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rsg" {
-  name     = regex("^[-\\w\\._\\(\\)]+$", substr("rg-${var.RSG_ID}", 90))
+  name     = regex("^[-\\w\\._\\(\\)]+$", var.RSG_ID)
   location = "${var.LOCATION_NAME}"
 }
