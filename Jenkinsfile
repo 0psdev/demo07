@@ -26,7 +26,7 @@ pipeline {
         stage('TF') {
             steps {
                 bat 'terraform init'
-                bat 'terraform plan -var "RSG_NAME=%RSG_ID%"'
+                bat 'terraform plan -var "RSG_NAME=%TF_VAR_RSG_ID%"'
             }
         }
     }

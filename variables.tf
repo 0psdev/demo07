@@ -12,4 +12,5 @@ variable "RSG_NAME" {
 
 variable "LOCATION_NAME" {
   type = string
+  default = "southeastasia"
 }
